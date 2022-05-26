@@ -1,0 +1,98 @@
+
+@import 'variables';
+body {
+	font-family: 'Poppins', 'sans-serif';
+	background-color: $veryLightGray;
+	color: $veryDarkBlue;
+}
+
+.container	{
+	width: 1440px;
+	margin: 0 auto;
+	@include mobile {
+		width: 100%;
+	}
+}
+
+header {
+	text-align: center;
+	font-size: 1.7rem;
+	@include mobile { 
+		font-size: 1rem;
+	}
+	span {
+		&.top {
+			display: block;
+			font-weight: 200;
+		}
+		&.bottom {
+			display: block;
+			font-weight: 600;
+		}
+	}
+	> p {
+		width: 70%;
+		margin: 0 auto;
+		font-weight: 200;
+		@include mobile {
+			font-weight: 200;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.row {
+	display: flex;
+	padding-top: 25px;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	@include mobile {
+		flex-direction: column;
+		width: 95%;
+		margin: 10px;
+	}
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	@include mobile {
+		margin: 0;
+	}
+}
+.card {
+	position: relative;
+	padding: 20px 35px;
+	height: 250px;
+	width: 300px;
+	margin: 25px;
+	border-radius: 2%;
+	background-color: $white;
+	box-shadow: 3px 3px 5px 6px #eee;
+	
+	@include mobile {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	img {
+		position: absolute;
+		bottom: 25px;
+		right: 35px;
+	}
+	&#calculator {
+		border-top: 5px solid $blue;
+	}
+	&#team-builder {
+		border-top: 5px solid $red;
+	}
+	&#karma {
+		border-top: 5px solid $orange;
+	}
+	&#supervisor {
+		border-top: 5px solid $cyan;
+	}
+}
+
+
